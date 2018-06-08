@@ -23,3 +23,4 @@ Include in angular.json:
             "src/vendor/js/rappid.js"
       ]
 
+           "node_modules/lodash/lodash.js",  if newest version
