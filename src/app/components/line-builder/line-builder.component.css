@@ -48,9 +48,10 @@ p.center {
 /* Paper */
 
 #paper-container {
-  width: 600px;
-  height: 300px;
-  background: #f4f4f4;
+  float:right;
+  width: 100%;
+  height: 150px;
+  background: #f4f4f4 !important;
   outline: 2px solid #f2f2f2;
   border: 5px solid #fff;
 }
@@ -63,6 +64,8 @@ p.center {
 }
 .joint-paper-scroller.joint-theme-modern .joint-paper {
   box-shadow: none;
+  border: 1px solid black !important;
+
 }
 /* Shapes */
 

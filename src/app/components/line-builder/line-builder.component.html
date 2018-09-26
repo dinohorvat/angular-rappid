@@ -1,3 +1,6 @@
-<input [(ngModel)]="code" placeholder="Code" type="number"/>
-<button (click)="initDiagram()">Rebuild</button>
-<div id="paper-container"></div>
+<button (click)="initDiagram()">Add Chart</button>
+<div *ngFor="let graph of graphs">
+  <input [(ngModel)]="graph.code" placeholder="Code" type="text"/>
+  <button (click)="addCell(graph.graph, graph.code)">Edit Line</button>
+</div>
+<div #paper id="paper-container"></div>
