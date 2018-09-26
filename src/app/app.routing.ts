@@ -4,6 +4,11 @@ import {LineBuilderComponent} from "./components/line-builder/line-builder.compo
 
 export const rootRouterConfig: Routes = [
   {
+    path: '',
+    redirectTo: 'line-builder',
+    pathMatch: 'full'
+  },
+  {
     path: 'org-chart',
     component: OrgChartComponent,
     pathMatch: 'full'
