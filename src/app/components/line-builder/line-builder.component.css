@@ -48,7 +48,7 @@ p.center {
 /* Paper */
 
 #paper-container {
-  width: 80%;
+  width: 600px;
   height: 300px;
   background: #f4f4f4;
   outline: 2px solid #f2f2f2;

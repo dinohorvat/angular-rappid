@@ -5,14 +5,18 @@ import { AppComponent } from './app.component';
 import {OrgChartComponent} from "./components/org-chart/org-chart.component";
 import {RouterModule} from "@angular/router";
 import {rootRouterConfig} from "./app.routing";
+import {LineBuilderComponent} from "./components/line-builder/line-builder.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrgChartComponent
+    OrgChartComponent,
+    LineBuilderComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
   ],
   providers: [],

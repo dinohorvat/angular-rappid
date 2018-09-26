@@ -2,7 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import * as jQuery from 'jquery';
 import * as _ from 'lodash';
 import * as $ from 'backbone';
-declare var joint: any
+declare var joint: any;
 
 @Component({
   selector: 'app-org-chart',
