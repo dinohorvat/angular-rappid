@@ -1,4 +1,4 @@
-<button (click)="initDiagram()">Add Chart</button>
+<button (click)="initDiagram('AQW#@0L0#')">Add Chart</button>
 <div *ngFor="let graph of graphs">
   <input [(ngModel)]="graph.code" placeholder="Code" type="text"/>
   <button (click)="addCell(graph.graph, graph.code)">Edit Line</button>
