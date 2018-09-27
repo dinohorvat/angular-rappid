@@ -1,7 +1,7 @@
 import * as jQuery from 'jquery';
 import * as _ from 'lodash';
 import * as $ from 'backbone';
-import {Component, OnInit} from "@angular/core";
+import {ChangeDetectorRef, Component, OnInit} from "@angular/core";
 declare var joint: any;
 
 @Component({
@@ -88,6 +88,7 @@ export class LineBuilderComponent implements OnInit {
         let length = parseInt(this.split[i].substring(this.split[i].indexOf('L') + 1));
         lengthSum += length;
         if(lengthSum >= 1200){
+          graph.valid = false;
           return false;
         }
         let link;
@@ -118,10 +119,14 @@ export class LineBuilderComponent implements OnInit {
         //   '.marker-source': { fill: '#31d0c6', stroke: 'none', d: 'M 10 0 L 0 5 L 10 10 z' },
         //   '.marker-target': { fill: '#fe854f', stroke: '#7c68fc', d: 'M 10 0 L 0 5 L 10 10 z' }
         // });
+        graph.valid = true;
         graph.addCell([link]);
       }
     }
-    else return false;
+    else{
+      graph.valid = false;
+      return false;
+    }
 
   }
   }

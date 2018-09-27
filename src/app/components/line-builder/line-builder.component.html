@@ -1,6 +1,7 @@
 <button (click)="initDiagram('AQW#@0L0#')">Add Chart</button>
 <div *ngFor="let graph of graphs">
-  <input [(ngModel)]="graph.code" placeholder="Code" type="text"/>
+  <input style="width: 50%; margin-right: 10px;" [(ngModel)]="graph.code" placeholder="Code" type="text"/>
   <button (click)="addCell(graph.graph, graph.code)">Edit Line</button>
+  <span>Validity: {{graph.graph.valid}}</span>
 </div>
 <div #paper id="paper-container"></div>
